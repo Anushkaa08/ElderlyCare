@@ -1,4 +1,4 @@
-# ElderlyCare – Backend (Member 2: FastAPI)
+# ElderlyCare – FastAPI Backend
 
 Hardware-free elderly health monitoring. Vitals are **simulated**.
 
