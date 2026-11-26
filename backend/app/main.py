@@ -3,7 +3,7 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-
+from app.routers import ml
 from . import database
 from .routers import alerts, patients, settings, vitals
 
@@ -41,5 +41,5 @@ def health():
     return {"status": "ok"}
 
 
-for r in (patients.router, vitals.router, alerts.router, settings.router):
+for r in (patients.router, vitals.router, alerts.router, settings.router, ml.router):
     app.include_router(r)
